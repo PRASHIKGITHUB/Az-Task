@@ -1,0 +1,14 @@
+.profile{
+    position: absolute;
+    top: 58px;
+    left: 1716px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 63px;
+    width: 140px;
+}
+.profile .notification{
+    margin-right:22px ;
+}

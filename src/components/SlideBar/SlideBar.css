@@ -1,0 +1,113 @@
+/* Sidebar.css */
+
+.sidebar {
+    position: relative;
+    top: 64px;
+    left: 78px;
+    width: 267px;
+    height: 566px;
+    background-color: transparent;
+    border-right: 1px solid #e0e0e0;
+    transition: width 0.3s ease;
+  }
+  
+  .sidebar.closed {
+    width: 70px;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .hamburger {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin-left: 10px;
+  }
+  .hamburger img{
+    margin-right:18px ;
+  }
+  
+  .logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1e2a4a;
+    margin-left: 10px;
+  }
+  
+  .sidebar-content {
+    margin-top: 20px;
+    /* padding-left: 20px; */
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .menu {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .menu-item {
+    display: flex;
+    align-items: center;
+    /* justify-content:space-around; */
+    /* width: 20%; */
+    /* padding: 8px 8px; */
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+  .menu-item-open{
+    width: 200px;
+  }
+  .menu-item-closed{
+    width: 50px;
+  }
+
+  .menu-item:hover{
+    background-color: #D7F4FE;
+  }
+  
+  .menu-item .icon {
+    margin-right: 25px;
+  }
+  
+  .menu-item .text {
+    transition: opacity 0.3s ease;
+    font-size: 22px;
+  }
+  
+  .sidebar.closed .menu-item .text {
+    display: none;
+  }
+
+  .hamburger img{
+    height: 32px;
+    width: 32px;
+    /* margin-left: 6px; */
+  }
+  
+  .header .logo-text img{
+    margin-top:3px ;
+  }
+  .header{
+    margin-bottom: 20px;
+    height: 40px;
+    width: 251px;
+  }
+  .menu li{
+    height: 64px;
+    margin: 0px;
+    padding: 0px;
+    /* padding-left: 10px; */
+    padding-left: 10px;
+    
+  }
