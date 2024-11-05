@@ -12,3 +12,9 @@
 .profile .notification{
     margin-right:22px ;
 }
+.profile .profileimg img{
+    /* size-adjust: 100%; */
+    object-fit: contain;
+    height: 50px;
+    border-radius:50% ;
+}

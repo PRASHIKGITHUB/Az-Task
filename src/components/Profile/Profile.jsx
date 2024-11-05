@@ -2,6 +2,8 @@ import React from 'react'
 import './Profile.css'
 import bell from '../../assets/Bell.png'
 import photo from '../../assets/profilePhoto.png'
+import profile from '../../assets/profile.jpeg'
+
 const Profile = () => {
   return (
     <div className='profile'>
@@ -9,7 +11,7 @@ const Profile = () => {
             <img src={bell} alt="" />
         </div>
         <div className="profileimg">
-            <img src={photo} alt="" />
+            <img  src={profile} alt="" />
         </div>
     </div>
   )

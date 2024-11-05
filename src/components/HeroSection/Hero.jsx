@@ -16,10 +16,10 @@ import resource from '../../assets/resource.png';
 
 const chaptersData = {
     1: [
-        { chapterNo: "1", title: "Introduction of DP", content: [{ type: "video", title: "FrameWork 1", time: "10:00" }, { type: "video", title: "Framework 2", time: "10:00" }, { type: "article", title: "Article 1", time: "10:00" }], time: "2:00:00", level: "Medium", completion: 45,materialcnt:3 },
-        { chapterNo: "2", title: "More on DP", content: [{ type: "quiz", title: "Quiz 1", time: "10:00" }], time: "1:00:00", level: "Medium", completion: 20,materialcnt:6 },
-        { chapterNo: "3", title: "Applications of DP", content: [{ type: "video", title: "Applicztion 1", time: "10:00" }, { type: "article", title: "Article 1", time: "10:00" }], time: "2:00:00", level: "Medium", completion: 45 ,materialcnt:2},
-        { chapterNo: "4", title: "DP Drill", content: [{ type: "quiz", title: "Quiz 1", time: "10:00" }], time: "1:00:00", level: "Medium", completion: 69,materialcnt:10 },
+        { chapterNo: "1", title: "Introduction of DP", content: [{ type: "video", title: "FrameWork 1", time: "10:00" }, { type: "video", title: "Framework 2", time: "10:00" }, { type: "article", title: "Article 1", time: "10:00" }], time: "2:00:00", level: "Medium", completion: 45, materialcnt: 3 },
+        { chapterNo: "2", title: "More on DP", content: [{ type: "quiz", title: "Quiz 1", time: "10:00" }], time: "1:00:00", level: "Medium", completion: 20, materialcnt: 6 },
+        { chapterNo: "3", title: "Applications of DP", content: [{ type: "video", title: "Applicztion 1", time: "10:00" }, { type: "article", title: "Article 1", time: "10:00" }], time: "2:00:00", level: "Medium", completion: 45, materialcnt: 2 },
+        { chapterNo: "4", title: "DP Drill", content: [{ type: "quiz", title: "Quiz 1", time: "10:00" }], time: "1:00:00", level: "Medium", completion: 69, materialcnt: 10 },
     ],
     2: [
         { chapterNo: "1", title: "Introduction of Grap", content: [{ type: "video", title: "FrameWork 1", time: "10:00" }, { type: "video", title: "Framework 2", time: "10:00" }, { type: "article", title: "Article 1", time: "10:00" }], time: "2:00:00", level: "Medium", completion: 85 },
