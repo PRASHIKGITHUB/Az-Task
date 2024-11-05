@@ -11,25 +11,33 @@ import articleIcon from '../../assets/article.png';
 import quizIcon from '../../assets/quiz.png';
 import codingIcon from '../../assets/coding.png';
 import resourceIcon from '../../assets/resource.png';
+import contest from '../../assets/contest.png';
+import resource from '../../assets/resource.png';
 
 const chaptersData = {
     1: [
-        { title: "Part 1: Lorem Ipsum Dolor Sit Amet", content: [{ type: "video", title: "Video 1", time: "10:00" },{ type: "video", title: "Video 1", time: "10:00" }, { type: "article", title: "Article 1", time: "10:00" }], time: "2:00:00", level: "Medium", completion: 45 },
-        { title: "Part 2: Lorem Ipsum Dolor Sit Amet", content: [{ type: "quiz", title: "Quiz 1", time: "10:00" }], time: "1:00:00", level: "Medium", completion: 20 },
-        { title: "Part 1: Lorem Ipsum Dolor Sit Amet", content: [{ type: "video", title: "Video 1", time: "10:00" }, { type: "article", title: "Article 1", time: "10:00" }], time: "2:00:00", level: "Medium", completion: 45 },
-        { title: "Part 2: Lorem Ipsum Dolor Sit Amet", content: [{ type: "quiz", title: "Quiz 1", time: "10:00" }], time: "1:00:00", level: "Medium", completion: 20 },
+        { chapterNo: "1", title: "Introduction of DP", content: [{ type: "video", title: "FrameWork 1", time: "10:00" }, { type: "video", title: "Framework 2", time: "10:00" }, { type: "article", title: "Article 1", time: "10:00" }], time: "2:00:00", level: "Medium", completion: 45,materialcnt:3 },
+        { chapterNo: "2", title: "More on DP", content: [{ type: "quiz", title: "Quiz 1", time: "10:00" }], time: "1:00:00", level: "Medium", completion: 20,materialcnt:6 },
+        { chapterNo: "3", title: "Applications of DP", content: [{ type: "video", title: "Applicztion 1", time: "10:00" }, { type: "article", title: "Article 1", time: "10:00" }], time: "2:00:00", level: "Medium", completion: 45 ,materialcnt:2},
+        { chapterNo: "4", title: "DP Drill", content: [{ type: "quiz", title: "Quiz 1", time: "10:00" }], time: "1:00:00", level: "Medium", completion: 69,materialcnt:10 },
     ],
     2: [
-        { title: "Part 1: Introduction to Chapter 2", content: [{ type: "video", title: "Video 1", time: "15:00" }, { type: "article", title: "Article 1", time: "15:00" }], time: "1:30:00", level: "Easy", completion: 30 },
+        { chapterNo: "1", title: "Introduction of Grap", content: [{ type: "video", title: "FrameWork 1", time: "10:00" }, { type: "video", title: "Framework 2", time: "10:00" }, { type: "article", title: "Article 1", time: "10:00" }], time: "2:00:00", level: "Medium", completion: 85 },
+        { chapterNo: "2", title: "Dijkstra Algorithm", content: [{ type: "quiz", title: "Quiz 1", time: "10:00" }], time: "1:00:00", level: "Medium", completion: 25 },
+        { chapterNo: "3", title: "Bellman Ford Algorithm", content: [{ type: "video", title: "Applicztion 1", time: "10:00" }, { type: "article", title: "Article 1", time: "10:00" }], time: "2:00:00", level: "Medium", completion: 59 },
+        { chapterNo: "4", title: "Floyd Warshall Algorithm", content: [{ type: "quiz", title: "Quiz 1", time: "10:00" }], time: "1:00:00", level: "Medium", completion: 79 },
     ],
     3: [
-        { title: "Part 1: Lorem Ipsum Dolor Sit Amet", content: [{ type: "video", title: "Video 1", time: "10:00" },{ type: "video", title: "Video 1", time: "10:00" }, { type: "article", title: "Article 1", time: "10:00" }], time: "2:00:00", level: "Medium", completion: 45 },
-        { title: "Part 2: Lorem Ipsum Dolor Sit Amet", content: [{ type: "quiz", title: "Quiz 1", time: "10:00" }], time: "1:00:00", level: "Medium", completion: 20 },
-        { title: "Part 1: Lorem Ipsum Dolor Sit Amet", content: [{ type: "video", title: "Video 1", time: "10:00" }, { type: "article", title: "Article 1", time: "10:00" }], time: "2:00:00", level: "Medium", completion: 45 },
-        { title: "Part 2: Lorem Ipsum Dolor Sit Amet", content: [{ type: "quiz", title: "Quiz 1", time: "10:00" }], time: "1:00:00", level: "Medium", completion: 20 },
+        { chapterNo: "1", title: "Part 1: Lorem Ipsum Dolor Sit Amet", content: [{ type: "video", title: "Video 1", time: "10:00" }, { type: "video", title: "Video 1", time: "10:00" }, { type: "article", title: "Article 1", time: "10:00" }], time: "2:00:00", level: "Medium", completion: 45 },
+        { chapterNo: "2", title: "Part 2: Lorem Ipsum Dolor Sit Amet", content: [{ type: "quiz", title: "Quiz 1", time: "10:00" }], time: "1:00:00", level: "Medium", completion: 20 },
+        { chapterNo: "3", title: "Part 1: Lorem Ipsum Dolor Sit Amet", content: [{ type: "video", title: "Video 1", time: "10:00" }, { type: "article", title: "Article 1", time: "10:00" }], time: "2:00:00", level: "Medium", completion: 45 },
+        { chapterNo: "4", title: "Part 2: Lorem Ipsum Dolor Sit Amet", content: [{ type: "quiz", title: "Quiz 1", time: "10:00" }], time: "1:00:00", level: "Medium", completion: 20 },
     ],
     4: [
         { title: "Part 1: Introduction to Chapter 2", content: [{ type: "video", title: "Video 1", time: "15:00" }, { type: "article", title: "Article 1", time: "15:00" }], time: "1:30:00", level: "Easy", completion: 30 },
+    ],
+    5: [
+        { title: "Part 1: Introduction to Chapter 2", content: [{ type: "video", title: "Video 1", time: "15:00" }, { type: "article", title: "Article 1", time: "15:00" }], time: "1:30:00", level: "Easy", completion: 50 },
     ],
 };
 
@@ -53,7 +61,11 @@ const getIcon = (type) => {
 const HeroSection = () => {
     const [activeChapter, setActiveChapter] = useState(1);
     const [openDropdowns, setOpenDropdowns] = useState({});
+    const [activeButton, setActiveButton] = useState("");
 
+    const handleButtonClick = (buttonName) => {
+        setActiveButton(buttonName);
+    };
     const calculateTotalTime = (chapterParts) => {
         let totalSeconds = 0;
         chapterParts.forEach(part => {
@@ -83,17 +95,24 @@ const HeroSection = () => {
         <div className="hero-section">
             <div className="up">
                 <div className="left">
-                    <button>
+                    <button
+                        className={activeButton === "mentor" ? "active" : ""}
+                        onClick={() => handleButtonClick("mentor")}
+                    >
                         <img src={CalendarOutline} alt="Calendar Icon" />
                         <p>Mentor Sessions</p>
                     </button>
-                    <button>
+                    <button
+                        className={activeButton === "learning" ? "active" : ""}
+                        onClick={() => handleButtonClick("learning")}
+                    >
                         <img src={BriefcaseOutline} alt="Briefcase Icon" />
                         <p>Learning Material</p>
                     </button>
                 </div>
+
                 <div className="right">
-                    <button>
+                    <button onClick={() => handleButtonClick("howitworks")}>
                         <img src={howitworks} alt="How it Works Icon" />
                         <p>How it Works</p>
                     </button>
@@ -108,36 +127,62 @@ const HeroSection = () => {
                             className={`tab-button ${activeChapter === chapter ? 'active' : ''}`}
                             onClick={() => switchChapter(chapter)}
                         >
-                            <p>Chapter {chapter}</p>
+                            <p style={{ fontSize: '20px' }} >Chapter {chapter}</p>
                             {activeChapter === chapter && (
                                 <div className="time-display">
                                     <img src={clockIcon} alt="clock icon" />
-                                    <span>{calculateTotalTime(chaptersData[chapter] || [])}</span>
+                                    <span style={{ fontSize: '20px', color: '#84A5DD' }} >{calculateTotalTime(chaptersData[chapter] || [])}</span>
                                 </div>
                             )}
                         </button>
                     ))}
                 </div>
-
+                {/* dsfdsfsdf */}
                 <div className="content-panel">
                     {(chaptersData[activeChapter] || []).map((part, index) => (
                         <div key={index} className={`part ${openDropdowns[activeChapter]?.[index] ? 'open' : ''}`}>
-                            <div className="part-header" onClick={() => toggleDropdown(index)}>
-                                <span>{part.title}</span>
-                                <span className="dropdown-indicator">
-                                    <img src={openDropdowns[activeChapter]?.[index] ? upArrow : downArrow} alt="toggle icon" />
-                                </span>
+
+                            <div className="wrapper" onClick={() => toggleDropdown(index)}>
+                                <div className="part-title">
+                                    <p className='first' >PART {part.chapterNo}</p>
+                                    <p className='second' >{part.title} </p>
+                                </div>
+                                <div className="wrapper-right">
+
+                                    <div style={{ width: '421px', height: '36px' }} className="part-icons">
+
+                                        <span>
+                                            <img src={clockIcon} alt="" />
+                                            <p>{part.time}</p>
+                                        </span>
+                                        <span>
+                                            <img src={contest} alt="" />
+                                            <p>{part.level}</p>
+                                        </span>
+                                        <span>
+                                            <img src={resource} alt="" />
+                                            <p>{part.materialcnt}</p>
+                                        </span>
+                                        <span>
+                                            <span className="dropdown-indicator">
+                                                <img style={{ height: '16px', width: '29px' }} src={openDropdowns[activeChapter]?.[index] ? upArrow : downArrow} alt="toggle icon" />
+                                            </span>
+                                        </span>
+                                    </div>
+
+                                    <div className="wrapper-down">
+                                        <p>{part.completion}% Completed</p>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div style={{ position: 'absolute', bottom: '0px', left: '0px' }} className="progress-bar">
+                                    <div className="progress" style={{ width: `${part.completion}%` }}></div>
+                                </div>
                             </div>
 
-                            <div className="part-info">
-                                <span>{part.time}</span>
-                                <span>{part.level}</span>
-                                <span>{part.completion}% Completed</span>
-                            </div>
-
-                            <div className="progress-bar">
-                                <div className="progress" style={{ width: `${part.completion}%` }}></div>
-                            </div>
 
                             {openDropdowns[activeChapter]?.[index] && (
                                 <div className="dropdown-content">

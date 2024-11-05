@@ -1,5 +1,4 @@
-/* Sidebar.css */
-
+/* Sidebar styling */
 .sidebar {
   position: sticky;
   top: 64px;
@@ -15,9 +14,13 @@
   width: 70px;
 }
 
+/* Header styling */
 .header {
   display: flex;
   align-items: center;
+  margin-bottom: 20px;
+  height: 40px;
+  width: 251px;
 }
 
 .hamburger {
@@ -28,8 +31,11 @@
   outline: none;
   margin-left: 10px;
 }
-.hamburger img{
-  margin-right:18px ;
+
+.hamburger img {
+  height: 32px;
+  width: 32px;
+  margin-right: 18px;
 }
 
 .logo-text {
@@ -39,11 +45,14 @@
   margin-left: 10px;
 }
 
+.header .logo-text img {
+  margin-top: 3px;
+}
+
+/* Sidebar content styling */
 .sidebar-content {
   margin-top: 20px;
-  /* padding-left: 20px; */
   font-family: "Montserrat", serif;
-  font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
 }
@@ -53,29 +62,44 @@
   padding: 0;
 }
 
+.menu li {
+  height: 64px;
+  padding-left: 10px;
+  margin: 0px;
+}
+
+/* Menu item styling */
 .menu-item {
   display: flex;
   align-items: center;
-  /* justify-content:space-around; */
-  /* width: 20%; */
-  /* padding: 8px 8px; */
   font-size: 18px;
   color: #333;
   cursor: pointer;
   margin-bottom: 5px;
   border-radius: 5px;
-}
-.menu-item-open{
-  width: 200px;
-}
-.menu-item-closed{
-  width: 50px;
+  transition: background-color 0.3s ease;
 }
 
-.menu-item:hover{
-  background-color: #D7F4FE;
+/* Hover effect for menu items */
+.menu-item:hover {
+  background-color: #dcecf196;
 }
 
+/* Active menu item styling (for the clicked item) */
+.menu-item.active {
+  background-color: #d7f4fe; /* Keeps background color after clicking */
+}
+
+/* Menu item width adjustment based on sidebar state */
+.menu-item-open {
+  width: 220px;
+}
+
+.menu-item-closed {
+  width: 55px;
+}
+
+/* Icon and text styling for menu items */
 .menu-item .icon {
   margin-right: 25px;
 }
@@ -85,29 +109,7 @@
   font-size: 22px;
 }
 
+/* Hide text when sidebar is closed */
 .sidebar.closed .menu-item .text {
   display: none;
-}
-
-.hamburger img{
-  height: 32px;
-  width: 32px;
-  /* margin-left: 6px; */
-}
-
-.header .logo-text img{
-  margin-top:3px ;
-}
-.header{
-  margin-bottom: 20px;
-  height: 40px;
-  width: 251px;
-}
-.menu li{
-  height: 64px;
-  margin: 0px;
-  padding: 0px;
-  /* padding-left: 10px; */
-  padding-left: 10px;
-  
 }
