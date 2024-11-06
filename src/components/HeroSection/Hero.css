@@ -109,7 +109,7 @@ body {
     border-radius: 16px;
     overflow: hidden;
     background-color: #ffffff;
-    transition: box-shadow 0.3s;
+    /* transition:height 0.3 ease, box-shadow 0.3s; */
 
 }
 
@@ -161,7 +161,7 @@ body {
     flex-direction: column;
     gap: 10px;
     overflow: hidden;
-    transition: height 1s ease, opacity 0.5s ease;
+    transition: max-height 0.5s ease, opacity 0.5s ease, visibility 0.5s;
 }
 
 .dropdown-content .dropContents {

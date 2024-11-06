@@ -1,5 +1,7 @@
 .app{
-    position: relative;
+    /* position: relative; */
     background-image: linear-gradient(rgb(255, 255, 255), #d0eefd);
     height: 200vh;
+    display: flex;
+    /* justify-content: center; */
 }
