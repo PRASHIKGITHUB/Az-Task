@@ -63,6 +63,30 @@ const HeroSection = ({ isOpen }) => {
     const [openDropdowns, setOpenDropdowns] = useState({});
     const [activeButton, setActiveButton] = useState("");
     const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 1600);
+    const [isNarrowScreen, setIsNarrowScreen] = useState(window.innerWidth <= 1000);
+    const [isSmall, setIsSmall] = useState(window.innerWidth <= 1250);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsSmall(window.innerWidth <= 1250);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+    useEffect(() => {
+        const handleResize = () => {
+            setIsNarrowScreen(window.innerWidth <= 1000);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     useEffect(() => {
         const handleResize = () => {
@@ -131,6 +155,7 @@ const HeroSection = ({ isOpen }) => {
                 </div>
             </div>
 
+            {/* efjwfsadlkfjasdfjasdfskdjfasdjf;asjdf;lasdjfl; */}
             <div className="down">
                 <div className="side-panel">
                     {[1, 2, 3, 4, 5].map((chapter) => (
@@ -139,7 +164,10 @@ const HeroSection = ({ isOpen }) => {
                             className={`tab-button ${activeChapter === chapter ? 'active' : ''}`}
                             onClick={() => switchChapter(chapter)}
                         >
-                            <p style={{ fontSize: '20px' }}>Chapter {chapter}</p>
+                            <p style={{ fontSize: '20px' }}>
+                                {isSmall ? `Ch. ${chapter}` : `Chapter ${chapter}`}
+                                {/* Chapter {chapter} */}
+                            </p>
 
                             {/* Conditionally render time display only if screen is > 1300px */}
                             {!isSmallScreen && activeChapter === chapter && (
@@ -166,27 +194,30 @@ const HeroSection = ({ isOpen }) => {
                                     <p className='second' >{part.title} </p>
                                 </div>
                                 <div className="wrapper-right">
-
-                                    <div style={{ width: '421px', height: '36px' }} className="part-icons">
-
-                                        <span>
-                                            <img src={clockIcon} alt="" />
-                                            <p>{part.time}</p>
-                                        </span>
-                                        <span>
-                                            <img src={contest} alt="" />
-                                            <p>{part.level}</p>
-                                        </span>
-                                        <span>
-                                            <img src={resource} alt="" />
-                                            <p>{part.materialcnt}</p>
-                                        </span>
-                                        <span>
-                                            <span className="dropdown-indicator">
-                                                <img style={{ height: '16px', width: '29px' }} src={openDropdowns[activeChapter]?.[index] ? upArrow : downArrow} alt="toggle icon" />
+                                    {/* Conditionally render part-icons only if screen width is greater than 1000px */}
+                                    {!isNarrowScreen && (
+                                        <div style={{ width: '421px', height: '36px' }} className="part-icons">
+                                            <span>
+                                                <img src={clockIcon} alt="" />
+                                                <p>{part.time}</p>
                                             </span>
-                                        </span>
-                                    </div>
+                                            <span>
+                                                <img src={contest} alt="" />
+                                                <p>{part.level}</p>
+                                            </span>
+                                            <span>
+                                                <img src={resource} alt="" />
+                                                <p>{part.materialcnt}</p>
+                                            </span>
+                                            <span className="dropdown-indicator">
+                                                <img
+                                                    style={{ height: '16px', width: '29px' }}
+                                                    src={openDropdowns[activeChapter]?.[index] ? upArrow : downArrow}
+                                                    alt="toggle icon"
+                                                />
+                                            </span>
+                                        </div>
+                                    )}
 
                                     <div className="wrapper-down">
                                         <p>{part.completion}% Completed</p>
