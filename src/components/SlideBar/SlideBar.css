@@ -1,17 +1,17 @@
 /* Sidebar styling */
 .sidebar {
-  position:absolute ;
+  position: absolute;
   top: 64px;
-  left: 78px;  
+  left: 78px;
   width: 15%;
   height: 566px;
   background-color: transparent;
-  border-right: 1px solid #e0e0e0;
   transition: width 0.3s ease;
 }
 
 .sidebar.closed {
   width: 4%;
+  border-right: 1px solid #e0e0e0;
 }
 
 /* Header styling */
@@ -113,3 +113,22 @@
 .sidebar.closed .menu-item .text {
   display: none;
 }
+
+/* Responsive styling */
+@media (max-width: 1660px) {
+  /* Tablet view */
+  
+  .sidebar.closed {
+    width: 4%;
+    border-right: 1px solid transparent;
+  }
+  .menu-item .text {
+    font-size: 16px;
+  }
+  .menu-item.menu-item-open{
+    width: 85%;
+  }
+  
+}
+
+

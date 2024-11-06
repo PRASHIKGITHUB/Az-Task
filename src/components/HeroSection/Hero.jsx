@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Hero.css';
 import upArrow from '../../assets/upArrow.png';
 import downArrow from '../../assets/downarrow.png';
@@ -58,10 +58,22 @@ const getIcon = (type) => {
     }
 };
 
-const HeroSection = ({isOpen}) => {
+const HeroSection = ({ isOpen }) => {
     const [activeChapter, setActiveChapter] = useState(1);
     const [openDropdowns, setOpenDropdowns] = useState({});
     const [activeButton, setActiveButton] = useState("");
+    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 1600);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsSmallScreen(window.innerWidth <= 1600);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     const handleButtonClick = (buttonName) => {
         setActiveButton(buttonName);
@@ -92,7 +104,7 @@ const HeroSection = ({isOpen}) => {
     };
 
     return (
-        <div className={`hero-section ${isOpen?'heroOpen' : 'heroClose'}`} >
+        <div className={`hero-section ${isOpen ? 'heroOpen' : 'heroClose'}`} >
             <div className="up">
                 <div className="left">
                     <button
@@ -127,16 +139,22 @@ const HeroSection = ({isOpen}) => {
                             className={`tab-button ${activeChapter === chapter ? 'active' : ''}`}
                             onClick={() => switchChapter(chapter)}
                         >
-                            <p style={{ fontSize: '20px' }} >Chapter {chapter}</p>
-                            {activeChapter === chapter && (
+                            <p style={{ fontSize: '20px' }}>Chapter {chapter}</p>
+
+                            {/* Conditionally render time display only if screen is > 1300px */}
+                            {!isSmallScreen && activeChapter === chapter && (
                                 <div className="time-display">
                                     <img src={clockIcon} alt="clock icon" />
-                                    <span style={{ fontSize: '20px', color: '#84A5DD' }} >{calculateTotalTime(chaptersData[chapter] || [])}</span>
+                                    <span style={{ fontSize: '20px', color: '#84A5DD' }}>
+                                        {calculateTotalTime(chaptersData[chapter] || [])}
+                                    </span>
                                 </div>
                             )}
                         </button>
                     ))}
                 </div>
+
+
                 {/* dsfdsfsdf */}
                 <div className="content-panel">
                     {(chaptersData[activeChapter] || []).map((part, index) => (
