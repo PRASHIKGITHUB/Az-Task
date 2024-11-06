@@ -9,13 +9,13 @@ import leaderboard from "../../assets/leaderboard.png";
 import menu from "../../assets/Menu.png";
 import logo from "../../assets/az logo.png";
 
-const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(true);
+const Sidebar = ({isOpen,toggleSidebar}) => {
+  // const [isOpen, setIsOpen] = useState(true);
   const [activeItem, setActiveItem] = useState(null);
 
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
-  };
+  // const toggleSidebar = () => {
+  //   setIsOpen(!isOpen);
+  // };
 
   const handleItemClick = (item) => {
     setActiveItem(item); // Set the clicked item as active

@@ -22,6 +22,22 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
     border-radius: 16px;
     background-color: #ffffff;
+    transition: all 0.3s;
+}
+
+.hero-section.heroClose{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 161px;
+    left: 200px;
+    width: 1650px;
+    height: auto;
+    padding: 20px;
+    border: 1px solid #d7e3ec;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+    background-color: #ffffff;
 }
 
 

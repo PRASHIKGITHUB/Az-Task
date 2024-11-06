@@ -58,7 +58,7 @@ const getIcon = (type) => {
     }
 };
 
-const HeroSection = () => {
+const HeroSection = ({isOpen}) => {
     const [activeChapter, setActiveChapter] = useState(1);
     const [openDropdowns, setOpenDropdowns] = useState({});
     const [activeButton, setActiveButton] = useState("");
@@ -92,7 +92,7 @@ const HeroSection = () => {
     };
 
     return (
-        <div className="hero-section">
+        <div className={`hero-section ${isOpen?'heroOpen' : 'heroClose'}`} >
             <div className="up">
                 <div className="left">
                     <button
