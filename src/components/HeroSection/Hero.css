@@ -14,8 +14,8 @@ body {
     flex-direction: column;
     position: absolute;
     top: 161px;
-    left: 400px;
-    width: 1456px;
+    left: 20%;
+    width: 79%;
     height: auto;
     padding: 20px;
     border: 1px solid #d7e3ec;
@@ -31,7 +31,7 @@ body {
     position: absolute;
     top: 161px;
     left: 200px;
-    width: 1650px;
+    width: 80%;
     height: auto;
     padding: 20px;
     border: 1px solid #d7e3ec;
@@ -49,7 +49,7 @@ body {
 
 /* Side Panel */
 .side-panel {
-    width: 420px;
+    width: 28%;
     height: 399px;
     background-color: transparent;
     display: flex;
@@ -91,10 +91,16 @@ body {
     border: 1px solid #9ec9ff;
     font-weight: bold;
 }
-
+.side-panel button{
+    width: 100%;
+}
 /* Content Panel */
 .content-panel {
-    flex: 1;
+    /* flex: 1; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
     background-color: #ffffff;
     padding: 20px;
     border: 1px solid #e0e7ef;
@@ -105,7 +111,7 @@ body {
 .part {
     border: 1px solid #e6eef5;
     margin-bottom: 10px;
-    width: 1001px;
+    width: 100%;
     border-radius: 16px;
     overflow: hidden;
     background-color: #ffffff;
@@ -243,6 +249,10 @@ body {
     color: #4a90e2;
     box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
 }
+.down{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 
 
@@ -257,7 +267,7 @@ body {
 /* wrapper */
 .wrapper {
     height: 160px;
-    width: 1001px;
+    width: 100%;
     display: flex;
 
     flex-direction: row;

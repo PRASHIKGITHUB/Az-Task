@@ -22,7 +22,7 @@ const chaptersData = {
         { chapterNo: "4", title: "DP Drill", content: [{ type: "quiz", title: "Quiz 1", time: "10:00" }], time: "1:00:00", level: "Medium", completion: 69, materialcnt: 10 },
     ],
     2: [
-        { chapterNo: "1", title: "Introduction of Grap", content: [{ type: "video", title: "FrameWork 1", time: "10:00" }, { type: "video", title: "Framework 2", time: "10:00" }, { type: "article", title: "Article 1", time: "10:00" }], time: "2:00:00", level: "Medium", completion: 85 },
+        { chapterNo: "1", title: "Introduction of Graph", content: [{ type: "video", title: "FrameWork 1", time: "10:00" }, { type: "video", title: "Framework 2", time: "10:00" }, { type: "article", title: "Article 1", time: "10:00" }], time: "2:00:00", level: "Medium", completion: 85 },
         { chapterNo: "2", title: "Dijkstra Algorithm", content: [{ type: "quiz", title: "Quiz 1", time: "10:00" }], time: "1:00:00", level: "Medium", completion: 25 },
         { chapterNo: "3", title: "Bellman Ford Algorithm", content: [{ type: "video", title: "Applicztion 1", time: "10:00" }, { type: "article", title: "Article 1", time: "10:00" }], time: "2:00:00", level: "Medium", completion: 59 },
         { chapterNo: "4", title: "Floyd Warshall Algorithm", content: [{ type: "quiz", title: "Quiz 1", time: "10:00" }], time: "1:00:00", level: "Medium", completion: 79 },

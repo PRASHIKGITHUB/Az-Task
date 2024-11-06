@@ -1,9 +1,9 @@
 /* Sidebar styling */
 .sidebar {
-  position: sticky;
+  position:absolute ;
   top: 64px;
-  left: 78px;
-  width: 267px;
+  left: 78px;  
+  width: 15%;
   height: 566px;
   background-color: transparent;
   border-right: 1px solid #e0e0e0;
@@ -11,7 +11,7 @@
 }
 
 .sidebar.closed {
-  width: 70px;
+  width: 4%;
 }
 
 /* Header styling */
